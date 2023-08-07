@@ -1,5 +1,5 @@
-export class Constants {
-    static USER = {
+module.exports = new class Constants {
+     USER = {
         NAME: 'Ann',
         COUNTY: 'United States',
         EMAIL: '7237wmm16sb@gmail.com',
@@ -17,7 +17,7 @@ export class Constants {
         YEAR: '2000',
     };
 
-    static MESSAGE = [
+     MESSAGE = [
         'Please fill out this field.',
         'Email Address already exist!',
         'Your email or password is incorrect!',
@@ -25,28 +25,28 @@ export class Constants {
     ];
 
 
-    static RANDOM_NAMES = ['Ann', 'Sara', 'John', 'Hannah','Jack','Lara','Lea','Jane'];
+     RANDOM_NAMES = ['Ann', 'Sara', 'John', 'Hannah','Jack','Lara','Lea','Jane'];
 
 
-    static RANDOM_LAST_NAMES = ['James', 'Parker', 'Smith', 'Brown','Johnson','Williams','Miller','Davis'];
+     RANDOM_LAST_NAMES = ['James', 'Parker', 'Smith', 'Brown','Johnson','Williams','Miller','Davis'];
 
 
-    static randName() {
+     randName() {
         return Constants.RANDOM_NAMES[Constants.rand(0, Constants.RANDOM_NAMES.length - 1)];
     }
 
 
-    static randLastName() {
+     randLastName() {
         return Constants.RANDOM_LAST_NAMES[Constants.rand(0, Constants.RANDOM_LAST_NAMES.length - 1)];
     }
 
 
-    static rand(min, max) {
+     rand(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
 
-    static randomEmail() {
+     randomEmail() {
         const chars = 'abcdefghijklmnopqrstuvwxyz1234567890';
         let string = '';
         for (let e = 0; e < 10; e++) {
@@ -56,7 +56,7 @@ export class Constants {
     }
 
 
-    static randStr() {
+     randStr() {
         return Math.random().toString(36).substr(2, 10);
     }
 }

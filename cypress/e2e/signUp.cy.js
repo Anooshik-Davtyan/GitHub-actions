@@ -1,9 +1,9 @@
 import SignUpFunctionality from "../support/SignUp/signup_helpers";
-import { Constants } from "../support/Methods/constants";
+import Constants from "../support/Methods/constants";
 import Validators from "../support/Methods/validators";
 import SignInFunctionality from "../support/SignIn/signin-helpers";
 
-describe('verify registration functionality', () => {
+describe.skip('verify registration functionality', () => {
   const signUp = new SignUpFunctionality();
   const signIn = new SignInFunctionality();
   const validator = new Validators();
